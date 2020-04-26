@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: openebs-python-myapp
+spec:
+  selector:
+    matchLabels:
+      app: openebs-python-myapp
+  template:
+    metadata:
+      labels:
+        app: openebs-python-myapp
+    spec:
+      containers:
+      - name: openebs-python-myapp-container
+        image: dunefro/hostpath:v1
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        volumeMounts:
+          - mountPath: /workspace/apps/
+            name: hostpath-volume
+      volumes:
+        - name: hostpath-volume
+          persistentVolumeClaim:
+            claimName: openebs-hostpath-pvc
