@@ -18,3 +18,10 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "500m"
+        volumeMounts:
+          - mountPath: /apps/
+            name: hostpath-volume
+      volumes:
+        - name: hostpath-volume
+          persistentVolumeClaim:
+            claimName: hostpath-pvc
