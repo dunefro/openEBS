@@ -2,4 +2,4 @@ FROM python:latest
 
 COPY . /
 
-RUN python3 run.py
+CMD python3 run.py
