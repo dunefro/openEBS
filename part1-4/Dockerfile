@@ -1,5 +1,7 @@
 FROM python:latest
 
-COPY . /
+COPY . /workspace
+
+WORKDIR /workspace
 
 CMD python3 run.py
