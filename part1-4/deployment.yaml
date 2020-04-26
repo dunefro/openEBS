@@ -19,7 +19,7 @@ spec:
             memory: "128Mi"
             cpu: "500m"
         volumeMounts:
-          - mountPath: /apps/
+          - mountPath: /workspace/apps/
             name: hostpath-volume
       volumes:
         - name: hostpath-volume
