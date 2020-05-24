@@ -24,4 +24,4 @@ spec:
       volumes:
         - name: cstor-volume
           persistentVolumeClaim:
-            claimName: cstor-pvc
+            claimName: cstor-python-pvc
