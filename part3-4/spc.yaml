@@ -1,0 +1,13 @@
+apiVersion: openebs.io/v1alpha1
+kind: StoragePoolClaim
+metadata:
+  name: cstor-disk-pool
+spec:
+  name: cstor-disk-pool
+  type: disk
+  poolSpec:
+    poolType: striped
+  blockDevices:
+    blockDeviceList:
+    - blockdevice-5f3a80cd284b4e68f6131d1cdaa9f37e
+    - blockdevice-6123eaeaa15eb91067e36530a5cb34f2
